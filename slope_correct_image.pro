@@ -13,8 +13,8 @@ PRO slope_correct_image, ht_file, slope_file, out_file
 
 	;break file into 100 blocks
 
-	nblocks = slope_file.size/2/100
-	remainder = slope_file.size mod 200
+	nblocks = slope_info.size/2/100
+	remainder = slope_info.size mod 200
 
 	ht_block = fltarr(nblocks)
 	slope_block = intarr(nblocks)
@@ -22,7 +22,7 @@ PRO slope_correct_image, ht_file, slope_file, out_file
 	
 	openr, ht_lun, ht_file, /get_lun
 	openr, slope_lun, slope_file, /get_lun
-	openw, out_lun, out_file
+	openw, out_lun, out_file, /get_lun
 
 	for i=0ULL, 99ULL do begin
 		out_block[*] = 0
