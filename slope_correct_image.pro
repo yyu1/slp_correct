@@ -31,7 +31,7 @@ PRO slope_correct_image, ht_file, slope_file, out_file
 		readu, ht_lun, ht_block
 		readu, slope_lun, slope_block
 
-		index = where((ht_block gt 0) and (slope_block ne -100), count)
+		index = where(ht_block gt 0, count)
 		if (count gt 0) then begin
 			out_block[index] = slope_corr(ht_block[index],slope_block[index])
 		endif
