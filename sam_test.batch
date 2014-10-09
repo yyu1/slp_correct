@@ -1,0 +1,4 @@
+ht_file = '/Volumes/Global_250m/output/sam/v3/3.2sec/maxent_sam_hlorey_3.2sec_method5_fuzzy2.flt'
+slope_file = '/Volumes/Global_250m/srtm/srtm_pctslp_sam_slice.int'
+out_file = '/Volumes/Global_250m/output/sam/v3/3.2sec/maxent_sam_hlorey_3.2sec_method5_fuzzy2_slpcorr.flt'
+slope_correct_image, ht_file, slope_file, out_file
