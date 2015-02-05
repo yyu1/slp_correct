@@ -30,6 +30,7 @@ PRO slope_correct_image_int, ht_file, slope_file, out_file
 
 		readu, ht_lun, ht_block
 		readu, slope_lun, slope_block
+		out_block[*] = ht_block
 
 		index = where(ht_block gt 0, count)
 		if (count gt 0) then begin
@@ -46,6 +47,7 @@ PRO slope_correct_image_int, ht_file, slope_file, out_file
 		out_block = intarr(remainder/2)
 		readu, ht_lun, ht_block
 		readu, slope_lun, slope_block
+		out_block[*] = ht_block
 
 		index = where((ht_block gt 0) and (slope_block ge 0) and (slope_block le 100), count)
 		if (count gt 0) then begin
