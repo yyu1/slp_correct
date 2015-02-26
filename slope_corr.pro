@@ -1,8 +1,8 @@
 ;Slope values are pct slope x 100 (designed to take int input whose value is slope x 100)
 
 Function slope_corr, height, slope
-	scale1 = 3000 ; start correcting at 30% slope
-	scale2 = 5000 ; ramp up to full correction by 60% slope
+	scale1 = 2500 ; start correcting at 25% slope
+	scale2 = 4000 ; ramp up to full correction by 40% slope
 	
 	if n_elements(height) gt 1 then begin
 		;array input
